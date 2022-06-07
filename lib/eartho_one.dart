@@ -78,7 +78,7 @@ class EarthoOne {
     return EarthoUser.fromJSON(decodedJson);
   }
 
-  Future<dynamic> logout() async {
-    return await _channel.invokeListMethod('logout');
+  Future<dynamic> disconnect() async {
+    return await _channel.invokeListMethod('disconnect');
   }
 }
