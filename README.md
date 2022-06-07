@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://eartho.world">
-    <img src="https://github.com/eartho-group/one-client-flutter/raw/main/github/images/logo.png" alt="Logo" width="128" height="128">
+    <img src="https://user-images.githubusercontent.com/99670283/172473537-5b4005cf-979b-45cf-bc8a-0f74fb6842e5.png" alt="Logo" width="128" height="128">
   </a>
 
   <h1 align="center">Eartho. One</h1>
@@ -38,7 +38,7 @@
 <div align="center">
 <br />
 <a href="https://eartho.world">
-    <img src="https://github.com/eartho-group/one-client-flutter/raw/main/github/images/eartho.gif" alt="Logo" height="300">
+    <img src="https://user-images.githubusercontent.com/99670283/172473765-7744c0ab-e203-4294-8385-5678e4d9d757.gif" alt="Logo" height="300">
   </a>
 </div>
 <br />
