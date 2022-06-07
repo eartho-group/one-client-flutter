@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://eartho.world">
-    <img src="github/images/logo.png" alt="Logo" width="128" height="128">
+    <img src="https://github.com/eartho-group/one-client-flutter/raw/main/github/images/logo.png" alt="Logo" width="128" height="128">
   </a>
 
   <h1 align="center">Eartho. One</h1>
@@ -38,7 +38,7 @@
 <div align="center">
 <br />
 <a href="https://eartho.world">
-    <img src="github/images/eartho.gif" alt="Logo" height="300">
+    <img src="https://github.com/eartho-group/one-client-flutter/raw/main/github/images/eartho.gif" alt="Logo" height="300">
   </a>
 </div>
 <br />
@@ -90,22 +90,4 @@ Eartho - [@eartho_world](https://twitter.com/eartho_world) - contact@eartho.worl
 Project Link: [https://github.com/eartho-group/](https://github.com/your_username/group)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: github/images/eartho.gif
 
