@@ -1,6 +1,6 @@
 name: eartho_one
 description: Get users from all sources into your app fast!
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/eartho-group/one-client-flutter
 
 environment:
