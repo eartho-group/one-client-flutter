@@ -23,11 +23,11 @@
     <a href="https://www.eartho.world/product/learn"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="https://eartho.world">Our Website</a>
     ·
-    <a href="https://www.eartho.world/company/contact">Report Bug</a>
+    <a href="https://github.com/eartho-group/one-client-flutter/issues">Report Bug</a>
     ·
-    <a href="https://www.eartho.world/company/contact">Request Feature</a>
+    <a href="https://github.com/eartho-group/one-client-flutter/issues">Request Feature</a>
   </p>
 </div>
 
