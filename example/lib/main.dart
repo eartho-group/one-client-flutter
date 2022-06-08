@@ -58,7 +58,7 @@ class _MyAppState extends State<MyApp> {
 
               ElevatedButton(
                   onPressed: () async {
-                    final u = await earthoOne?.getUser();
+                    final user = await earthoOne?.getUser();
                     setState(() {
                       _user = u;
                     });
