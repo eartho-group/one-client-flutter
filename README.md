@@ -49,7 +49,8 @@ From improving customer experience through seamless sign-on to making auth as ea
 Here's why:
 * Login from Google, Twitter, Github, Facebook, Apple, Microsoft at once with not extra steps or extra effort.
 * Your users will be protected under our third layer, we prevent from companies to track after your users.
-* Advaned analytics and info about your app from all sources. ready for use. no extra steps
+* Advanced analytics and info about your app from all sources. ready for use. no extra steps
+* No-Code / Your own server. you decide. We support all, your own server, our server, firebase auth and many more.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
