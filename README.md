@@ -30,7 +30,7 @@
     <a href="https://github.com/eartho-group/one-client-flutter/issues">Request Feature</a>
   </p>
  <br />
-<img src="https://user-images.githubusercontent.com/99670283/173240555-43f8d4f7-5552-48a6-94c2-0d0143375a1e.png" height="64">
+<img src="https://user-images.githubusercontent.com/99670283/173242342-a7b5b130-3769-4f28-a4d7-a957504070d0.png" height="64">
 <img src="https://user-images.githubusercontent.com/99670283/173238668-cc62e08a-622b-42da-b914-36f5f361942d.png">
 </div>
 
