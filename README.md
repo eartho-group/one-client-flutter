@@ -20,7 +20,7 @@
     Get users from all sources into your app fast!<br />
     We are a third layer that abstracts the complexity for you and protects your users from being tracked.
     <br /><br />
-    <a href="https://www.eartho.world/product/learn"><strong>Explore the docs »</strong></a>
+    <a href="https://www.eartho.world/product/learn"><strong>Quick Start »</strong></a>
     <br />
     <br />
     <a href="https://eartho.world">Our Website</a>
@@ -29,6 +29,9 @@
     ·
     <a href="https://github.com/eartho-group/one-client-flutter/issues">Request Feature</a>
   </p>
+ <br />
+<img src="https://user-images.githubusercontent.com/99670283/173240555-43f8d4f7-5552-48a6-94c2-0d0143375a1e.png" height="64">
+<img src="https://user-images.githubusercontent.com/99670283/173238668-cc62e08a-622b-42da-b914-36f5f361942d.png">
 </div>
 
 
@@ -58,11 +61,14 @@ Here's why:
 <!-- GETTING STARTED -->
 ## Getting Started
 
+<h3 align="center">Only 3 simple steps and you done</h3>
+<p align="center">
+
 We manage our documents on our website as a single source of truth.
 Open our quick start guide to get started.
 
 https://www.eartho.world/product/learn
-
+</p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
