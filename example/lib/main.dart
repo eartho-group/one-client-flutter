@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
                   onPressed: () async {
                     final user = await earthoOne?.getUser();
                     setState(() {
-                      _user = u;
+                      _user = user;
                     });
                   },
                   child: const Text("Get User")),
