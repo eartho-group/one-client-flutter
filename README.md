@@ -38,13 +38,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<div align="center">
+<p align="center">
 <br />
-<a href="https://eartho.world">
-    <img src="https://user-images.githubusercontent.com/99670283/172473765-7744c0ab-e203-4294-8385-5678e4d9d757.gif" alt="Logo" height="300">
-  </a>
+    <img src="https://user-images.githubusercontent.com/99670283/173504901-695e423a-de2a-4f70-873b-33fce39aa49c.png" alt="Logo" height="300"/ >
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <img src="https://user-images.githubusercontent.com/99670283/172473765-7744c0ab-e203-4294-8385-5678e4d9d757.gif" alt="Logo" height="300" />
 </div>
-<br />
+<br /><br /><br />
 Get all integrations at once. No extra steps.
 From improving customer experience through seamless sign-on to making auth as easy as a click of a button – your login box must find the right balance between user convenience, privacy and security.
 
