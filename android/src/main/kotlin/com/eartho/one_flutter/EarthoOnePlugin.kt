@@ -56,7 +56,7 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
                             val data = gson.toJson(c)
                             result.success(data)
                     }, onFailure = { f ->
-                            result.error("AuthenticationException", f.message + f.cause?.message, activity)
+                            result.error("AuthenticationException", f.message + f.cause?.message,"")
                     })
 
             } catch (e: Exception) {
@@ -89,35 +89,12 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
         channel.setMethodCallHandler(null)
     }
 
-    fun connectWithRedirect(params: ConnectParams, @NonNull result: Result) {
-        try {
-            earthoOne.connectWithRedirect(accessId = params.accessId, onSuccess = { c ->
-                activity?.runOnUiThread {
-                    val gson = Gson()
-                    val data = gson.toJson(c)
-                    result.success(data)
-                }
-            }, onFailure = { f ->
-                activity?.runOnUiThread {
-                    f.printStackTrace()
-                    result.error("AuthenticationException", f.message, activity)
-                }
-            })
-
-            result.error("AuthenticationException", "error", activity)
-
-        } catch (e: Exception) {
-            e.printStackTrace()
-            result.error("AuthenticationException", e.message, activity)
-        }
-    }
-
     fun getIdToken(@NonNull result: Result) {
         try {
             val token = earthoOne.getIdToken()
             result.success(token)
         } catch (e: Exception) {
-            result.error("Exception", e.message, activity)
+            result.error("Exception", e.message, "")
         }
     }
 
@@ -128,7 +105,7 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
             val data = gson.toJson(user)
             result.success(data)
         } catch (e: Exception) {
-            result.error("Exception", e.message, activity)
+            result.error("Exception", e.message, "")
         }
     }
 
@@ -136,7 +113,7 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
         try {
             val user = earthoOne.logout()
         } catch (e: Exception) {
-            result.error("Exception", e.message, activity)
+            result.error("Exception", e.message, "")
         }
     }
 
