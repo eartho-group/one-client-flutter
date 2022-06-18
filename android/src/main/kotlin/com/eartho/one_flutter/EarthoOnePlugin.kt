@@ -45,7 +45,7 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
                 call.argument<String>("clientId")!!,
                 call.argument<String>("clientSecret")!!
             )
-            config.networkingClient = DefaultClient(enableLogging = true)
+//            config.networkingClient = DefaultClient(enableLogging = true)
             earthoOne = EarthoOne(activity!!, config)
         } else if (call.method == "connectWithRedirect") {
             val gson = Gson()
