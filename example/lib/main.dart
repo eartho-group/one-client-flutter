@@ -26,7 +26,8 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-
+    
+    // Go to https://creator.eartho.world/ and get the details from security tab
     earthoOne = EarthoOne(
         clientId: "x5wNs5h7EiyhxzODBe1X",
         clientSecret: "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAya48nKOC9nIiQfayHpkF RkF7QD8PoX6JVhUuQMPY96ybAZYeaQJih8gpn/sqD03DCZmBhaF+UQBzWP14ycax baTD+j0DRF3zdxSk5RognHfcNq++dgr+dPR7jvuTOpX7YdWEdSSnu2XRXjHparwx jw5oTVQbd8IhSecurz/d72d55cWIO7LrmiONdz2unCYnNfT3txJ2TpY1O+8lPlmO GOcbMB67XI+HPviQdSg9q+0xFCbkbgInkCNCRAYol30bT7+jszfoKHTv1+xU22gZ xSH9rnpDS4txvcXDmMBGM6UV3h3RkQFr2BkQJqPXpo82oYv6DvoUIygV+N5vyXUV LQIDAQAB -----END PUBLIC KEY-----");
