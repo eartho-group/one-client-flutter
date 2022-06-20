@@ -18,3 +18,6 @@ Add Support
 
 1.0.8
 Fixing android dep
+
+1.0.10
+Update README

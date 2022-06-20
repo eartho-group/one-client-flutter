@@ -1,6 +1,6 @@
 name: eartho_one
-description: Get users from all sources into your app fast! Login & Authentications from all sources with 1 step ! Login from Google, Twitter, Github, Facebook, Apple, Microsoft at once with not extra steps or extra effort.
-version: 1.0.8
+description: Login and authentications from all sources with 1 line of code ! Login from Google, Twitter, Github, Facebook, Apple, Microsoft, Twitch and VK at once with not extra steps or extra effort.
+version: 1.0.10
 repository: https://github.com/eartho-group/one-client-flutter
 
 environment:
