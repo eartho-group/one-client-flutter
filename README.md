@@ -8,9 +8,10 @@
   <h1 align="center">Eartho. One</h1>
 
   <p align="center">
-    One line of code to authenticate users via any social network.<br />
+    One line of code to authenticate users via <b>any social network.</b><br />
     You dont need to read the docs of all companies and you dont need to open accounts there.<br />
-    We are a third layer that abstracts the complexity for you and protects your users from being tracked.
+    We are a third layer that abstracts the complexity for you and protects your users from being tracked.<br /><br />
+    You can easily keep your backend solution - self server / firebase / amplify , or get nocode solution from us.
     <br /><br />
     <a href="https://www.eartho.world/product/learn"><strong>Quick Start »</strong></a>
     <br />
