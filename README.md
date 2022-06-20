@@ -24,6 +24,7 @@
   </p>
  <br />
 <img src="https://user-images.githubusercontent.com/99670283/173242342-a7b5b130-3769-4f28-a4d7-a957504070d0.png" height="64">
+&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/99670283/173238668-cc62e08a-622b-42da-b914-36f5f361942d.png">
 </div>
 
@@ -34,7 +35,7 @@
 
 <p align="center">
 <br />
-    <img src="https://user-images.githubusercontent.com/99670283/173504901-695e423a-de2a-4f70-873b-33fce39aa49c.png" alt="Logo" height="300" />
+    <img src="https://user-images.githubusercontent.com/99670283/173504901-695e423a-de2a-4f70-873b-33fce39aa49c.png" alt="Logo" height="300" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <img src="https://user-images.githubusercontent.com/99670283/172473765-7744c0ab-e203-4294-8385-5678e4d9d757.gif" alt="Logo" height="300" />
 <br /><br /><br />
 Get all integrations at once. No extra steps.
