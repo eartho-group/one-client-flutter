@@ -8,8 +8,8 @@
   <h1 align="center">Eartho. One</h1>
 
   <p align="center">
-    Develop fast<br />
-    Get users from all sources into your app fast!<br />
+    One line of code to authenticate users via any social network.<br />
+    You dont need to read the docs of all companies and you dont need to open accounts there.<br />
     We are a third layer that abstracts the complexity for you and protects your users from being tracked.
     <br /><br />
     <a href="https://www.eartho.world/product/learn"><strong>Quick Start »</strong></a>
@@ -60,6 +60,8 @@ Here's why:
 <h3 align="center">Only 3 simple steps and you done</h3>
 <p align="center">
 
+  Develop fast<br />
+  Get users from all sources into your app fast!<br />
   One line of code to authenticate users via any social network. Eartho also supports web3 login via Metamask etc.<br />
   You dont need to read the docs of all companies and you dont need to open accounts there. <br />
   
