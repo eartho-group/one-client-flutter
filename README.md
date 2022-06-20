@@ -76,9 +76,13 @@ We manage our documents on our website as a single source of truth. Open our qui
 get started.
 
 <br /> 
-<h3>Full Docs Here <br /> <br /> https://www.eartho.world/product/learn</h3>
-<br /> <br />
+<h3>Full Docs Here<br /> 
+<a href="https://www.eartho.world/product/learn"> 
+https://www.eartho.world/product/learn
+</a></h3>
 </p>
+<br /> <br />
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
