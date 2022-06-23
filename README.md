@@ -22,7 +22,7 @@ You can easily keep your backend solution - self server / firebase / amplify , o
     <a href="https://github.com/eartho-group/one-client-flutter/issues">Request Feature</a>
   </p>
  <br />
-<img src="https://user-images.githubusercontent.com/99670283/175268270-a01f7c17-b983-4e98-97c2-58a370f22421.png">
+<img src="https://user-images.githubusercontent.com/99670283/175269660-d7925075-ed4e-4a56-853f-a4ef86cf90e8.png">
 </div>
 
 
