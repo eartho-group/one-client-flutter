@@ -20,6 +20,8 @@ You can easily keep your backend solution - self server / firebase / amplify , o
     <a href="https://github.com/eartho-group/one-client-flutter/issues">Report Bug</a>
     ·
     <a href="https://github.com/eartho-group/one-client-flutter/issues">Request Feature</a>
+    ·
+    <a href="https://discord.gg/5QbuTNTG2q">Discord</a>
   </p>
  <br />
 <img src="https://user-images.githubusercontent.com/99670283/175269660-d7925075-ed4e-4a56-853f-a4ef86cf90e8.png">
@@ -106,9 +108,15 @@ Distributed under the Mozilla Public License Version 2.0. See `LICENSE` for more
 
 ## Contact
 
-Eartho - [@eartho_world](https://twitter.com/eartho_world) - contact@eartho.world
+Eartho<br />
 
-Project Link: [https://github.com/eartho-group/](https://github.com/your_username/group)
+
+Discord - [Link](https://discord.gg/5QbuTNTG2q)<br />
+Twitter - [@eartho_world](https://twitter.com/eartho_world)<br />
+Email - contact@eartho.world<br />
+
+Project Link: [https://github.com/eartho-group/](https://github.com/eartho-group/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 
