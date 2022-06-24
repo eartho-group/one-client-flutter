@@ -21,3 +21,7 @@ Fixing android dep
 
 1.0.10
 Update README
+
+1.0.11
+Update README
+Bug Fix
