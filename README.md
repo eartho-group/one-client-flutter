@@ -24,7 +24,7 @@ You can easily keep your backend solution - self server / firebase / amplify , o
     <a href="https://discord.gg/5QbuTNTG2q">Discord</a>
   </p>
  <br />
-<img src="https://user-images.githubusercontent.com/99670283/175269660-d7925075-ed4e-4a56-853f-a4ef86cf90e8.png">
+<img src="https://user-images.githubusercontent.com/99670283/176105926-c9f0b25a-01de-45a1-97a6-2f93dbb4d81c.png">
 </div>
 
 
