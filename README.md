@@ -79,6 +79,11 @@ get started.
 <a href="https://www.eartho.world/product/learn"> 
 https://www.eartho.world/product/learn
 </a></h3>
+<br /> <br />
+<h3>
+<a href="https://discord.gg/5QbuTNTG2q"> 
+Our Discord For Live Support
+</a></h3>
 </p>
 <br /> <br />
 
