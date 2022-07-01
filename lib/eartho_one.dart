@@ -1,10 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+/// EarthoUser
 class EarthoCredentials {
   final String? tokenType;
   final String? refreshToken;
@@ -23,6 +21,7 @@ class EarthoCredentials {
         recoveryCode = json['recoveryCode'] ?? json['recovery_code'];
 }
 
+/// EarthoUser
 class EarthoUser {
   final String uid;
   final String? displayName;
@@ -45,6 +44,8 @@ class EarthoUser {
         phone = json['phone'] ?? json['phone'];
 }
 
+/// Official Eartho SDK
+/// https://creator.eartho.wolrd
 class EarthoOne {
   static const MethodChannel _channel = MethodChannel('eartho_one');
 
@@ -53,11 +54,16 @@ class EarthoOne {
 
   EarthoOne({required this.clientId, required this.clientSecret});
 
+  /// Init the sdk
   Future<dynamic> init() async {
      final a = await _channel.invokeMethod(
         'init', {"clientId": clientId, "clientSecret": clientSecret});
   }
 
+  /// Starts the access flow
+  ///
+  /// accessId - which access the user should connect to
+  /// take this value from creator.eartho.world
   Future<EarthoCredentials> connectWithRedirect(String accessId) async {
     final rawJson = await _channel
         .invokeMethod('connectWithRedirect', {"accessId": accessId});
@@ -65,12 +71,14 @@ class EarthoOne {
     return EarthoCredentials.fromJSON(decodedJson);
   }
 
+  /// After user connected, this function returns the id token of the user
   Future<String> getIdToken() async {
     final rawJson = await _channel.invokeMethod('getIdToken');
     // final decodedJson = jsonDecode(rawJson);
     return rawJson;
   }
 
+  /// After user connected, this function returns user object
   Future<EarthoUser?> getUser() async {
     final rawJson = await _channel.invokeMethod('getUser');
     if (rawJson == null) return null;
@@ -78,6 +86,7 @@ class EarthoOne {
     return EarthoUser.fromJSON(decodedJson);
   }
 
+  /// Disconnect this user from eartho and clear session
   Future<dynamic> disconnect() async {
     return await _channel.invokeListMethod('disconnect');
   }
