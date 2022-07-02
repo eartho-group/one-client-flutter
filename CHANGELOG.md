@@ -32,3 +32,6 @@ Bug Fix
 
 1.0.14
 Bug Fix Android
+
+1.0.15
+Imporving api - user canceled

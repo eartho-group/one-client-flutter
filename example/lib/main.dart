@@ -31,7 +31,8 @@ class _MyAppState extends State<MyApp> {
     // Go to https://creator.eartho.world/ and get the details from security tab
     earthoOne = EarthoOne(
         clientId: "x5wNs5h7EiyhxzODBe1X",
-        clientSecret: "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAya48nKOC9nIiQfayHpkF\nRkF7QD8PoX6JVhUuQMPY96ybAZYeaQJih8gpn/sqD03DCZmBhaF+UQBzWP14ycax\nbaTD+j0DRF3zdxSk5RognHfcNq++dgr+dPR7jvuTOpX7YdWEdSSnu2XRXjHparwx\njw5oTVQbd8IhSecurz/d72d55cWIO7LrmiONdz2unCYnNfT3txJ2TpY1O+8lPlmO\nGOcbMB67XI+HPviQdSg9q+0xFCbkbgInkCNCRAYol30bT7+jszfoKHTv1+xU22gZ\nxSH9rnpDS4txvcXDmMBGM6UV3h3RkQFr2BkQJqPXpo82oYv6DvoUIygV+N5vyXUV\nLQIDAQAB\n-----END PUBLIC KEY-----\n");
+        clientSecret:
+            "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAya48nKOC9nIiQfayHpkF\nRkF7QD8PoX6JVhUuQMPY96ybAZYeaQJih8gpn/sqD03DCZmBhaF+UQBzWP14ycax\nbaTD+j0DRF3zdxSk5RognHfcNq++dgr+dPR7jvuTOpX7YdWEdSSnu2XRXjHparwx\njw5oTVQbd8IhSecurz/d72d55cWIO7LrmiONdz2unCYnNfT3txJ2TpY1O+8lPlmO\nGOcbMB67XI+HPviQdSg9q+0xFCbkbgInkCNCRAYol30bT7+jszfoKHTv1+xU22gZ\nxSH9rnpDS4txvcXDmMBGM6UV3h3RkQFr2BkQJqPXpo82oYv6DvoUIygV+N5vyXUV\nLQIDAQAB\n-----END PUBLIC KEY-----\n");
 
     earthoOne?.init();
   }
@@ -48,8 +49,8 @@ class _MyAppState extends State<MyApp> {
             children: [
               ElevatedButton(
                   onPressed: () async {
-                    final credentials = await earthoOne?.connectWithRedirect(
-                        "2drlTkv19Alfvu9pEPTP");
+                    final credentials = await earthoOne
+                        ?.connectWithRedirect("2drlTkv19Alfvu9pEPTP");
                     if (credentials == null) {
                       print("user aborted");
                       return;
@@ -59,7 +60,6 @@ class _MyAppState extends State<MyApp> {
                     });
                   },
                   child: const Text("Login")),
-
               ElevatedButton(
                   onPressed: () async {
                     final user = await earthoOne?.getUser();
