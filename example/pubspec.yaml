@@ -1,5 +1,6 @@
 name: eartho_one_example
 description: Demonstrates how to use the flutter_eartho_one plugin.
+version: 1.0.0
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 

@@ -40,7 +40,7 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         if (call.method == "getPlatformVersion") {
             result.success("Android ${android.os.Build.VERSION.RELEASE}")
-        } else if (call.method == "init") {
+        } else if (call.method == "initEartho") {
             config = EarthoOneConfig(
                 call.argument<String>("clientId")!!,
                 call.argument<String>("clientSecret")!!
@@ -53,10 +53,15 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
                 earthoOne.connectWithRedirect(
                     accessId = call.argument<String>("accessId")!!,
                     onSuccess = { c ->
-                            val data = gson.toJson(c)
-                            result.success(data)
-                    }, onFailure = { f ->
-                            result.error("AuthenticationException", f.message + f.cause?.message,"")
+                        val data = gson.toJson(c)
+                        result.success(data)
+                    },
+                    onFailure = { f ->
+                        if(f.isCanceled){
+                             result.success(null);
+                            return;
+                        }
+                        result.error("AuthenticationException", f.message + f.cause?.message, "")
                     })
 
             } catch (e: Exception) {

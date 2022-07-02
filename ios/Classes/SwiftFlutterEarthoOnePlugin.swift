@@ -3,20 +3,32 @@ import UIKit
 import EarthoOne
 
 public class SwiftEarthoOnePlugin: NSObject, FlutterPlugin {
+
     public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "eartho_one", binaryMessenger: registrar.messenger())
         let instance = SwiftEarthoOnePlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
     }
     
-    let earthoOne = EarthoOne()
+    public override init() {
+        
+    }
+    
+    var earthoOne : EarthoOne?
     
     
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         switch(call.method) {
             case "getPlatformVersion":
                 result("iOS " + UIDevice.current.systemVersion)
-            case "init":
+            case "initEartho":
+                guard let args: [String: Any] = call.arguments as? [String:Any] else {
+                                            result(FlutterError(code: "invalid-params", message: nil, details: nil))
+                                            return
+                                        }
+                let clientId = args["clientId"] as! String
+                let clientSecret = args["clientSecret"] as! String
+            earthoOne = EarthoOne(clientId: clientId, clientSecret: clientSecret)
                 result("")
             case "connectWithRedirect":
                  guard let args: [String: Any] = call.arguments as? [String:Any] else {
@@ -56,6 +68,11 @@ public class SwiftEarthoOnePlugin: NSObject, FlutterPlugin {
     }
     
     public func connectWithRedirect(flutterResult: @escaping FlutterResult, accessId: String) {
+        guard let earthoOne = earthoOne else {
+            flutterResult(FlutterError(code: "ConnectFailure", message: "SDK is not initalized. please call init", details: ""))
+                return
+            }
+
         earthoOne.connectWithPopup(
             accessId: accessId,
             onSuccess: { credentials in
@@ -78,10 +95,18 @@ public class SwiftEarthoOnePlugin: NSObject, FlutterPlugin {
     }
     
     public func getIdToken(flutterResult: @escaping FlutterResult) {
+        guard let earthoOne = earthoOne else {
+            flutterResult(FlutterError(code: "ConnectFailure", message: "SDK is not initalized. please call init", details: ""))
+                return
+            }
         flutterResult(earthoOne.getIdToken())
     }
     
     public func getUser(flutterResult: @escaping FlutterResult) {
+        guard let earthoOne = earthoOne else {
+            flutterResult(FlutterError(code: "ConnectFailure", message: "SDK is not initalized. please call init", details: ""))
+                return
+            }
         do {
             let credentials = earthoOne.getUser();
             guard credentials != nil else {
@@ -100,6 +125,10 @@ public class SwiftEarthoOnePlugin: NSObject, FlutterPlugin {
     }
     
     public func disconnect(flutterResult: @escaping FlutterResult) {
-        
+        guard let earthoOne = earthoOne else {
+            flutterResult(FlutterError(code: "ConnectFailure", message: "SDK is not initalized. please call init", details: ""))
+                return
+            }
+        earthoOne.logout();
     }
 }
