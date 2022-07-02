@@ -64,9 +64,10 @@ class EarthoOne {
   ///
   /// accessId - which access the user should connect to
   /// take this value from creator.eartho.world
-  Future<EarthoCredentials> connectWithRedirect(String accessId) async {
+  Future<EarthoCredentials?> connectWithRedirect(String accessId) async {
     final rawJson = await _channel
         .invokeMethod('connectWithRedirect', {"accessId": accessId});
+    if(rawJson==null)return null;
     final decodedJson = jsonDecode(rawJson);
     return EarthoCredentials.fromJSON(decodedJson);
   }

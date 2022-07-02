@@ -23,21 +23,21 @@ class _MyAppState extends State<MyApp> {
   String? firebaseToken;
   EarthoCredentials? _credentials;
   EarthoOne? earthoOne;
+
   @override
   void initState() {
     super.initState();
-    
+
     // Go to https://creator.eartho.world/ and get the details from security tab
     earthoOne = EarthoOne(
         clientId: "x5wNs5h7EiyhxzODBe1X",
-        clientSecret: "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAya48nKOC9nIiQfayHpkF RkF7QD8PoX6JVhUuQMPY96ybAZYeaQJih8gpn/sqD03DCZmBhaF+UQBzWP14ycax baTD+j0DRF3zdxSk5RognHfcNq++dgr+dPR7jvuTOpX7YdWEdSSnu2XRXjHparwx jw5oTVQbd8IhSecurz/d72d55cWIO7LrmiONdz2unCYnNfT3txJ2TpY1O+8lPlmO GOcbMB67XI+HPviQdSg9q+0xFCbkbgInkCNCRAYol30bT7+jszfoKHTv1+xU22gZ xSH9rnpDS4txvcXDmMBGM6UV3h3RkQFr2BkQJqPXpo82oYv6DvoUIygV+N5vyXUV LQIDAQAB -----END PUBLIC KEY-----");
+        clientSecret: "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAya48nKOC9nIiQfayHpkF\nRkF7QD8PoX6JVhUuQMPY96ybAZYeaQJih8gpn/sqD03DCZmBhaF+UQBzWP14ycax\nbaTD+j0DRF3zdxSk5RognHfcNq++dgr+dPR7jvuTOpX7YdWEdSSnu2XRXjHparwx\njw5oTVQbd8IhSecurz/d72d55cWIO7LrmiONdz2unCYnNfT3txJ2TpY1O+8lPlmO\nGOcbMB67XI+HPviQdSg9q+0xFCbkbgInkCNCRAYol30bT7+jszfoKHTv1+xU22gZ\nxSH9rnpDS4txvcXDmMBGM6UV3h3RkQFr2BkQJqPXpo82oYv6DvoUIygV+N5vyXUV\nLQIDAQAB\n-----END PUBLIC KEY-----\n");
 
     earthoOne?.init();
   }
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -48,7 +48,12 @@ class _MyAppState extends State<MyApp> {
             children: [
               ElevatedButton(
                   onPressed: () async {
-                    final credentials = await earthoOne?.connectWithRedirect("2drlTkv19Alfvu9pEPTP");
+                    final credentials = await earthoOne?.connectWithRedirect(
+                        "2drlTkv19Alfvu9pEPTP");
+                    if (credentials == null) {
+                      print("user aborted");
+                      return;
+                    }
                     setState(() {
                       _credentials = credentials;
                     });
@@ -67,14 +72,14 @@ class _MyAppState extends State<MyApp> {
                   onPressed: () async {
                     final idToken = await earthoOne?.getIdToken();
                     setState(() {
-                      token= idToken;
+                      token = idToken;
                     });
                   },
                   child: const Text("Get Id token")),
               ElevatedButton(
                   onPressed: () async {
                     final idToken = await earthoOne?.getIdToken();
-                    if(idToken == null)return;
+                    if (idToken == null) return;
                     //you need to initate firebase
                     // FirebaseAuth.instance
                     //     .signInWithCustomToken(idToken)
@@ -84,8 +89,8 @@ class _MyAppState extends State<MyApp> {
                   },
                   child: const Text("Integreate with firebase auth")),
               Text(_user?.displayName ?? ''),
-              Text(token?.substring(0,10) ?? ''),
-              Text(firebaseToken?.substring(0,10) ?? ''),
+              Text(token?.substring(0, 10) ?? ''),
+              Text(firebaseToken?.substring(0, 10) ?? ''),
             ],
           ),
         ),
