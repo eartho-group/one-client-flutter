@@ -56,7 +56,7 @@ class EarthoOne {
 
   /// Init the sdk
   Future<dynamic> init() async {
-     final a = await _channel.invokeMethod(
+    await _channel.invokeMethod(
         'initEartho', {"clientId": clientId, "clientSecret": clientSecret});
   }
 
@@ -67,7 +67,7 @@ class EarthoOne {
   Future<EarthoCredentials?> connectWithRedirect(String accessId) async {
     final rawJson = await _channel
         .invokeMethod('connectWithRedirect', {"accessId": accessId});
-    if(rawJson==null)return null;
+    if (rawJson == null) return null;
     final decodedJson = jsonDecode(rawJson);
     return EarthoCredentials.fromJSON(decodedJson);
   }
