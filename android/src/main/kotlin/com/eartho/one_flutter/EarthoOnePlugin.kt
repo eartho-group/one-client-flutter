@@ -59,9 +59,13 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
                     onFailure = { f ->
                         if(f.isCanceled){
                              result.success(null);
-                            return;
+                        }else {
+                            result.error(
+                                "AuthenticationException",
+                                f.message + f.cause?.message,
+                                ""
+                            )
                         }
-                        result.error("AuthenticationException", f.message + f.cause?.message, "")
                     })
 
             } catch (e: Exception) {

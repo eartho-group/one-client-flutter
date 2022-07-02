@@ -87,8 +87,14 @@ public class SwiftEarthoOnePlugin: NSObject, FlutterPlugin {
                     flutterResult(FlutterError(code: "ConnectFailure", message: "Failure Logging In With EarthoOne", details: "Error encoding credentials"))
                 }
             },
-            onFailure: { WebAuthError in
-                flutterResult(FlutterError(code: "ConnectFailure", message: "Failure connecting with EarthoOne", details: WebAuthError))
+            onFailure: { error in
+                switch error {
+                case WebAuthError.userCancelled: // handle WebAuthError
+                    flutterResult(nil)
+                    default:
+                    flutterResult(FlutterError(code: "ConnectFailure", message: "Failure connecting with EarthoOne", details: "WebAuthError"))
+                }
+                    
             })
         
         
