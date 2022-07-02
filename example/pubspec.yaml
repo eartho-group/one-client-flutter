@@ -1,4 +1,4 @@
-name: eartho_one_example
+name: oneexample
 description: Demonstrates how to use the flutter_eartho_one plugin.
 version: 1.0.0
 
@@ -15,8 +15,8 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   flutter_dotenv: ^5.0.2
-  firebase_core: ^1.17.1
-  firebase_auth: ^3.3.19
+#  firebase_core: ^1.17.1
+#  firebase_auth: ^3.3.19
 
 
 dev_dependencies:

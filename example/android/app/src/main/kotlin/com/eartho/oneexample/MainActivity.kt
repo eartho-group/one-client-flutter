@@ -1,4 +1,4 @@
-package com.eartho.eartho_one_example
+package com.eartho.oneexample
 
 import io.flutter.embedding.android.FlutterActivity
 

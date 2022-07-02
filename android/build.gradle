@@ -43,7 +43,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
     }
 }
 
@@ -51,5 +51,5 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'com.google.code.gson:gson:2.8.5'
-    implementation 'io.github.eartho-group:one:1.0.8'
+    implementation 'io.github.eartho-group:one:1.0.10'
 }

@@ -1,4 +1,4 @@
-# eartho_one_example
+# oneexample
 
 Demonstrates how to use the flutter_eartho_one plugin.
 

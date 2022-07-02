@@ -35,3 +35,9 @@ Bug Fix Android
 
 1.0.15
 Imporving api - user canceled
+
+1.0.16
+Bug Fix Android
+
+1.0.17
+minSdkVersion Android
