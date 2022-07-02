@@ -1,6 +1,6 @@
 {
-    "name": "eartho_one_example",
-    "short_name": "eartho_one_example",
+    "name": "oneexample",
+    "short_name": "oneexample",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
