@@ -29,3 +29,6 @@ Bug Fix
 1.0.13
 Update README
 Bug Fix
+
+1.0.14
+Bug Fix Android

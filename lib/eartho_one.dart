@@ -57,7 +57,7 @@ class EarthoOne {
   /// Init the sdk
   Future<dynamic> init() async {
      final a = await _channel.invokeMethod(
-        'init', {"clientId": clientId, "clientSecret": clientSecret});
+        'initEartho', {"clientId": clientId, "clientSecret": clientSecret});
   }
 
   /// Starts the access flow
