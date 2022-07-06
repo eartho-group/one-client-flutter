@@ -41,3 +41,9 @@ Bug Fix Android
 
 1.0.17
 minSdkVersion Android
+
+1.0.18
+fixing proguard issue
+
+1.0.19
+update dependencies
