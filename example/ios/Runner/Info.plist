@@ -52,7 +52,7 @@
 			<string>eartho</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+				<string>$(PRODUCT_BUNDLE_IDENTIFIER).one.eartho.world</string>
 			</array>
 		</dict>
 	</array>
