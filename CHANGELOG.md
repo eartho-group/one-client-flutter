@@ -47,3 +47,6 @@ fixing proguard issue
 
 1.0.19
 update dependencies
+
+1.0.20
+update dependencies
