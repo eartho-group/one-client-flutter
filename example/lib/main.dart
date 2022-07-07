@@ -88,9 +88,18 @@ class _MyAppState extends State<MyApp> {
                     //     });
                   },
                   child: const Text("Integreate with firebase auth")),
-              Text(_user?.displayName ?? ''),
-              Text(token?.substring(0, 10) ?? ''),
-              Text(firebaseToken?.substring(0, 10) ?? ''),
+
+
+
+              Text(_user?.displayName ?? 'no user loaded'),
+              Text(
+                token ?? "no token loaded",
+                maxLines: 1,
+              ),
+              Text(
+                firebaseToken ?? "",
+                maxLines: 1,
+              ),
             ],
           ),
         ),
