@@ -1,6 +1,6 @@
 name: eartho_one
 description: Login and authentication of all sources with 1 line of code ! Google, Twitter, Github, Facebook, Apple, Microsoft, Twitch, SMS, Metamask, VK
-version: 1.0.22
+version: 1.1.0
 repository: https://github.com/eartho-group/one-client-flutter
 
 environment:
@@ -15,6 +15,7 @@ dependencies:
 
   plugin_platform_interface: ^2.0.2
   jwt_decoder: ^2.0.1
+  js: ^0.6.4
 
 dev_dependencies:
   flutter_test:
