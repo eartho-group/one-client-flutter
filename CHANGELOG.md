@@ -50,3 +50,6 @@ update dependencies
 
 1.0.20
 update dependencies
+
+1.1.0
+adding flutter web support
