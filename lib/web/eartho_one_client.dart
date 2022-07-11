@@ -3,7 +3,6 @@
 @JS()
 library eartho_one;
 
-import 'dart:html';
 
 import 'package:js/js.dart';
 
