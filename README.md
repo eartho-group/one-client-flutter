@@ -8,7 +8,7 @@
   <h1 align="center">Eartho. One</h1>
 
   <p align="center">
-    One line of code to authenticate users via <b>any social network, metamask and SMS</b><br />
+    One line of code to authenticate users via<br /><b>Any social network, metamask and phone authentication</b><br /><br />
 You don't need to read the documents of all companies and you don't need to open accounts there.<br />
 We are a third layer that abstracts the complexity for you and protects your users from being tracked.<br /><br />
 You can easily keep your backend solution - self server / firebase / amplify , or get a nocode solution from us.<br /><br />
@@ -43,6 +43,7 @@ From improving customer experience through seamless sign-on to making auth as ea
 
 Here's why:
 
+* Ready high converting UI/UX
 * Login from Google, Twitter, Github, Facebook, Apple, Microsoft at once with not extra steps or
   extra effort.
 * Your users will be protected under our third layer, we prevent from companies to track after your
