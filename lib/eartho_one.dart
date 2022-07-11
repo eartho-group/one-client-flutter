@@ -6,6 +6,7 @@ class EarthoOne {
 
   EarthoOne({required this.clientId, required this.clientSecret});
 
+  /// Get the sdk version
   Future<String?> getPlatformVersion() {
     return EarthoOnePlatform.instance.getPlatformVersion();
   }

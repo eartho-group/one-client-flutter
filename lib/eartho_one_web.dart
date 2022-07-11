@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:js_util';
 
 import 'package:eartho_one/web/eartho_one_client.dart';
@@ -70,9 +69,4 @@ class EarthoOneWeb extends EarthoOnePlatform {
     }
   }
 
-  @override
-  Future disconnect() {
-    // TODO: implement disconnect
-    return super.disconnect();
-  }
 }
