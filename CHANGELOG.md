@@ -53,3 +53,9 @@ update dependencies
 
 1.1.0
 adding flutter web support
+
+1.1.4
+support lower flutter version
+
+1.1.5
+updating ios version
