@@ -47,6 +47,7 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
             )
 //            config.networkingClient = DefaultClient(enableLogging = true)
             earthoOne = EarthoOne(activity!!, config)
+            earthoOne.init()
         } else if (call.method == "connectWithRedirect") {
             val gson = Gson()
             try {
@@ -57,9 +58,9 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
                         result.success(data)
                     },
                     onFailure = { f ->
-                        if(f.isCanceled){
-                             result.success(null);
-                        }else {
+                        if (f.isCanceled) {
+                            result.success(null);
+                        } else {
                             result.error(
                                 "AuthenticationException",
                                 f.message + f.cause?.message,
@@ -100,10 +101,18 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
 
     fun getIdToken(@NonNull result: Result) {
         try {
-            val token = earthoOne.getIdToken()
-            result.success(token)
+            earthoOne.getIdToken(onSuccess = { c ->
+                result.success(c.idToken)
+            },
+                onFailure = { f ->
+                    result.error(
+                        "CredentialsException",
+                        f.message + f.cause?.message,
+                        ""
+                    )
+                })
         } catch (e: Exception) {
-            result.error("Exception", e.message, "")
+            result.error("CredentialsException", e.message, "")
         }
     }
 

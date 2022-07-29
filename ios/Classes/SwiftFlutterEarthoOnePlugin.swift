@@ -30,6 +30,7 @@ public class SwiftEarthoOnePlugin: NSObject, FlutterPlugin {
                 let clientSecret = args["clientSecret"] as! String
             earthoOne = EarthoOne(clientId: clientId, clientSecret: clientSecret)
                 result("")
+            earthoOne?.start()
             case "connectWithRedirect":
                  guard let args: [String: Any] = call.arguments as? [String:Any] else {
                             result(FlutterError(code: "invalid-params", message: nil, details: nil))
@@ -103,14 +104,22 @@ public class SwiftEarthoOnePlugin: NSObject, FlutterPlugin {
     public func getIdToken(flutterResult: @escaping FlutterResult) {
         guard let earthoOne = earthoOne else {
             flutterResult(FlutterError(code: "ConnectFailure", message: "SDK is not initalized. please call init", details: ""))
-                return
+            return
+        }
+        earthoOne.getIdToken(
+            onSuccess: { credentials in
+                flutterResult(credentials.idToken)
+
+            },
+            onFailure: { error in
+                flutterResult(FlutterError(code: "CredentialsFailure", message: "Failure getIdToken", details: ""))
             }
-        flutterResult(earthoOne.getIdToken())
+        )
     }
     
     public func getUser(flutterResult: @escaping FlutterResult) {
         guard let earthoOne = earthoOne else {
-            flutterResult(FlutterError(code: "ConnectFailure", message: "SDK is not initalized. please call init", details: ""))
+            flutterResult(FlutterError(code: "getUser", message: "SDK is not initalized. please call init", details: ""))
                 return
             }
         do {

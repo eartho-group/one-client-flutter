@@ -59,7 +59,7 @@ class _MyAppState extends State<MyApp> {
                       _credentials = credentials;
                     });
                   },
-                  child: const Text("Login")),
+                  child: const Text("Login with Eartho")),
               ElevatedButton(
                   onPressed: () async {
                     final user = await earthoOne?.getUser();
