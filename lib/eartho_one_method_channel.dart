@@ -21,9 +21,9 @@ class MethodChannelEarthoOne extends EarthoOnePlatform {
 
   /// Init the sdk
   @override
-  Future<dynamic> initEartho({required String clientId, required String clientSecret}) async {
+  Future<dynamic> initEartho({required String clientId, required String clientSecret, List<String>? enabledProviders}) async {
     await methodChannel.invokeMethod(
-        'initEartho', {"clientId": clientId, "clientSecret": clientSecret});
+        'initEartho', {"clientId": clientId, "clientSecret": clientSecret, "enabledProviders": enabledProviders});
   }
 
   /// Starts the access flow

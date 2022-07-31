@@ -23,12 +23,13 @@ public class SwiftEarthoOnePlugin: NSObject, FlutterPlugin {
                 result("iOS " + UIDevice.current.systemVersion)
             case "initEartho":
                 guard let args: [String: Any] = call.arguments as? [String:Any] else {
-                                            result(FlutterError(code: "invalid-params", message: nil, details: nil))
-                                            return
-                                        }
+                    result(FlutterError(code: "invalid-params", message: nil, details: nil))
+                    return
+                }
                 let clientId = args["clientId"] as! String
                 let clientSecret = args["clientSecret"] as! String
-            earthoOne = EarthoOne(clientId: clientId, clientSecret: clientSecret)
+                            let enabledProviders = args["enabledProviders"] as? [String]
+earthoOne = EarthoOne(clientId: clientId, clientSecret: clientSecret, enabledProviders: enabledProviders)
                 result("")
             earthoOne?.start()
             case "connectWithRedirect":

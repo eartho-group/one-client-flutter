@@ -3,8 +3,9 @@ import 'eartho_one_platform_interface.dart';
 class EarthoOne {
   final String clientId;
   final String clientSecret;
+  final List<String>? enabledProviders;
 
-  EarthoOne({required this.clientId, required this.clientSecret});
+  EarthoOne({required this.clientId, required this.clientSecret, this.enabledProviders});
 
   /// Get the sdk version
   Future<String?> getPlatformVersion() {
@@ -13,7 +14,7 @@ class EarthoOne {
 
   /// Init the sdk
   Future<dynamic> init() async {
-    return EarthoOnePlatform.instance.initEartho(clientId: clientId, clientSecret:clientSecret);
+    return EarthoOnePlatform.instance.initEartho(clientId: clientId, clientSecret:clientSecret, enabledProviders: enabledProviders);
   }
 
   /// Starts the access flow

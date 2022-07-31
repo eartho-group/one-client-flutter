@@ -16,7 +16,7 @@ A new flutter plugin project.
   s.source_files = 'Classes/**/*'
 
   s.dependency 'Flutter'
-  s.dependency 'EarthoOne', '~> 1.0.7'
+  s.dependency 'EarthoOne', '~> 1.0.8'
 
   s.platform = :ios, '12.0'
 

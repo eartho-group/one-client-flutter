@@ -41,9 +41,12 @@ class EarthoOnePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
         if (call.method == "getPlatformVersion") {
             result.success("Android ${android.os.Build.VERSION.RELEASE}")
         } else if (call.method == "initEartho") {
+            val enabledProviders = call.argument<List<String>>("enabledProviders")?.toTypedArray();
+
             config = EarthoOneConfig(
                 call.argument<String>("clientId")!!,
-                call.argument<String>("clientSecret")!!
+                call.argument<String>("clientSecret")!!,
+                enabledProviders
             )
 //            config.networkingClient = DefaultClient(enableLogging = true)
             earthoOne = EarthoOne(activity!!, config)

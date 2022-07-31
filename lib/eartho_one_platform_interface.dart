@@ -30,7 +30,7 @@ abstract class EarthoOnePlatform extends PlatformInterface {
   }
 
   /// Init the sdk
-  Future<dynamic> initEartho({required String clientId, required String clientSecret}) async {
+  Future<dynamic> initEartho({required String clientId, required String clientSecret, List<String>? enabledProviders}) async {
     throw UnimplementedError('init() has not been implemented.');
   }
 

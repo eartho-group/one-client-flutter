@@ -59,3 +59,6 @@ support lower flutter version
 
 1.1.5
 updating ios version
+
+1.2.1
+adding enabledProviders control

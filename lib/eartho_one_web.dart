@@ -30,7 +30,7 @@ class EarthoOneWeb extends EarthoOnePlatform {
 
   @override
   Future initEartho(
-      {required String clientId, required String clientSecret}) async {
+      {required String clientId, required String clientSecret, List<String>? enabledProviders}) async {
     earthoInstance = await promiseToFuture(interop
         .createAuth0Client(interop.EarthoOneOptions(client_id: clientId)));
   }
