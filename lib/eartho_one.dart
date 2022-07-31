@@ -82,3 +82,21 @@ class EarthoUser {
         lastName = json['lastName'] ?? json['lastName'],
         phone = json['phone'] ?? json['phone'];
 }
+
+class EarthoAuthProvider {
+  static const facebook = 'facebook';
+  static const google = 'google';
+  static const twitter = 'twitter';
+
+  static const apple = 'apple';
+  static const github = 'github';
+  static const microsoft = 'microsoft';
+
+  static const vk = 'vk';
+  static const phone = 'phone';
+  static const metamask = 'metamask';
+
+  static const reddit = 'reddit';
+  static const snapchat = 'snapchat';
+  static const yandex = 'yandex';
+}
