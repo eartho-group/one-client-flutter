@@ -2,4 +2,4 @@ import 'package:js/js.dart';
 import 'eartho_one_client.dart';
 
 @JS('createEarthoOne')
-external EarthoOneWeb createAuth0Client(EarthoOneOptions options);
+external EarthoOneWeb createEarthoClient(EarthoOneOptions options);

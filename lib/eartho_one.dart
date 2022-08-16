@@ -25,6 +25,10 @@ class EarthoOne {
     return EarthoOnePlatform.instance.connectWithRedirect(accessId);
   }
 
+  Future<EarthoCredentials?> connectWithPopup(String accessId) async {
+    return EarthoOnePlatform.instance.connectWithPopup(accessId);
+  }
+
   /// After user connected, this function returns the id token of the user
   Future<String?> getIdToken() async {
     return EarthoOnePlatform.instance.getIdToken();

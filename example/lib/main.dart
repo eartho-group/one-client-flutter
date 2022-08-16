@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
               ElevatedButton(
                   onPressed: () async {
                     final credentials = await earthoOne
-                        ?.connectWithRedirect("2drlTkv19Alfvu9pEPTP");
+                        ?.connectWithRedirect("QJkg3evAtIqJgF80iB1o");
                     if (credentials == null) {
                       print("user aborted");
                       return;
@@ -88,9 +88,6 @@ class _MyAppState extends State<MyApp> {
                     //     });
                   },
                   child: const Text("Integreate with firebase auth")),
-
-
-
               Text(_user?.displayName ?? 'no user loaded'),
               Text(
                 token ?? "no token loaded",

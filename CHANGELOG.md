@@ -62,3 +62,6 @@ updating ios version
 
 1.2.1
 adding enabledProviders control
+
+1.2.3
+improving web errors logs

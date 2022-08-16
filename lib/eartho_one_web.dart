@@ -30,15 +30,30 @@ class EarthoOneWeb extends EarthoOnePlatform {
 
   @override
   Future initEartho(
-      {required String clientId, required String clientSecret, List<String>? enabledProviders}) async {
+      {required String clientId,
+      required String clientSecret,
+      List<String>? enabledProviders}) async {
     earthoInstance = await promiseToFuture(interop
-        .createAuth0Client(interop.EarthoOneOptions(client_id: clientId)));
+        .createEarthoClient(interop.EarthoOneOptions(client_id: clientId)));
+
+    earthoInstance?.handleRedirectCallback();
   }
 
   @override
   Future<EarthoCredentials?> connectWithRedirect(String accessId) async {
+    if(earthoInstance == null)return null;
     final rawJson = await promiseToFuture(earthoInstance
-        ?.connectWithPopup(LoginWithPopupOptions(access_id: accessId)));
+        ?.connectWithRedirect(RedirectConnectOptions(access_id: accessId)));
+    if (rawJson == null) return null;
+    // final decodedJson = jsonDecode(rawJson);
+    return EarthoCredentials.fromJSON(rawJson);
+  }
+
+  @override
+  Future<EarthoCredentials?> connectWithPopup(String accessId) async {
+    if(earthoInstance == null)return null;
+    final rawJson = await promiseToFuture(earthoInstance?.connectWithPopup(
+        PopupConnectOptions(access_id: accessId), PopupConfigOptions()));
     if (rawJson == null) return null;
     // final decodedJson = jsonDecode(rawJson);
     return EarthoCredentials.fromJSON(rawJson);
@@ -68,5 +83,4 @@ class EarthoOneWeb extends EarthoOnePlatform {
       return null;
     }
   }
-
 }

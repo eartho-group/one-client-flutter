@@ -42,6 +42,10 @@ abstract class EarthoOnePlatform extends PlatformInterface {
     throw UnimplementedError('connectWithRedirect() has not been implemented.');
   }
 
+  Future<EarthoCredentials?> connectWithPopup(String accessId) async {
+    throw UnimplementedError('connectWithPopup() has not been implemented.');
+  }
+
   /// After user connected, this function returns the id token of the user
   Future<String?> getIdToken() async {
     throw UnimplementedError('getIdToken() has not been implemented.');
@@ -56,4 +60,5 @@ abstract class EarthoOnePlatform extends PlatformInterface {
   Future<dynamic> disconnect() async {
     throw UnimplementedError('disconnect() has not been implemented.');
   }
+
 }
