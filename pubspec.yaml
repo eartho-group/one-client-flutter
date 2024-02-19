@@ -15,7 +15,7 @@ dependencies:
 
   plugin_platform_interface: ^2.0.2
   jwt_decoder: ^2.0.1
-  js: ^0.6.4
+  js: ">=0.6.4 <0.8.0"
 
 dev_dependencies:
   flutter_test:
